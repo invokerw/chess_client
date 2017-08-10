@@ -49,13 +49,14 @@ message MoveReq
 	required Move move = 1;
 }
 
-message MoveRsp
-{
-	required int32 err_no = 1;
-	optional Move move = 2;
-}
-
 message MoveNotify
 {
 	required Move move = 1;
 }
+
+
+message Winner
+{
+	required bool isred = 1;
+}
+

@@ -228,7 +228,9 @@ public class Playing : MonoBehaviour {
 		} else if (msg.name == "Table.MatchResult") {
 			onMatchResult (msg);
 		} else if (msg.name == "Table.MoveNotify") {
-			onMoveNotify(msg);
+			onMoveNotify (msg);
+		} else if (msg.name == "Table.Winner") {
+			gameOver (msg);
 		}
 	}
 
@@ -294,5 +296,12 @@ public class Playing : MonoBehaviour {
 		Debug.Log ("!!!!!!  OnMouseDown ismyturn====>"+ game.IsMyTurn ().ToString());
 		//Move中有改变
 		//game.ChangeMyTurn ();
+	}
+	void gameOver(NetWork.Msg msg)
+	{
+		Debug.Log ("gameOver....");
+		Table.Winner winner = (Table.Winner)msg.body;
+		bool isRed = winner.isred;
+		Debug.Log ("Winner... is red ?"+ isRed.ToString ());
 	}
 }
