@@ -29,7 +29,8 @@ ehthumbs.db
 # ===============
 [Tt]emp/*
 [Oo]bj/*
-[Bb]uild¡¢*
+[Bb]uild/*
 [Ll]ibrary/*
 sysinfo.txt
 *.stackdump
+Assets/outLog.txt
